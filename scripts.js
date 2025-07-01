@@ -59,3 +59,23 @@ themeToggle.addEventListener("click", () => {
     icon.classList.add("fa-moon");
   }
 });
+// ===== Handle Contact Form Submission =====
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent actual form submission
+
+  // Get input values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // For now, just log them (or use for further processing)
+  console.log("Name:", name);
+  console.log("Email:", email);
+  console.log("Message:", message);
+
+  // Optional: Show success alert
+  alert("Thank you for your message, " + name + "!");
+
+  // Optional: Clear form
+  this.reset();
+});
